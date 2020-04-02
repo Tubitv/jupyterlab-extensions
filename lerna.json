@@ -1,0 +1,11 @@
+{
+  "version": "independent",
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    },
+    "run": {
+      "stream": true
+    }
+  }
+}

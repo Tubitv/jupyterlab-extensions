@@ -1,0 +1,13 @@
+*.bundle.*
+lib/
+node_modules/
+*.egg-info/
+.ipynb_checkpoints
+lerna-debug.log
+
+*.tsbuildinfo
+*.lock
+
+.idea/
+.npmrc
+nodeenv

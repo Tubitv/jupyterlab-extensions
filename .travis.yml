@@ -1,0 +1,19 @@
+dist: xenial
+
+language: node_js
+node_js:
+  - '10.15.3'
+
+notifications:
+  email: false
+
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+
+install:
+  - npx lerna bootstrap
+
+script:
+  - npx lerna run test
