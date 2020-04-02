@@ -7,9 +7,9 @@
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/tubitv/jupyterlab-extensions",
+  "homepage": "https://github.com/Tubitv/jupyterlab-extensions",
   "bugs": {
-    "url": "https://github.com/tubitv/jupyterlab-extensions/issues"
+    "url": "https://github.com/Tubitv/jupyterlab-extensions/issues"
   },
   "license": "BSD-3-Clause",
   "author": "Tubi Engineering",
@@ -22,7 +22,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tubitv/jupyterlab-extensions.git"
+    "url": "https://github.com/Tubitv/jupyterlab-extensions.git"
   },
   "scripts": {
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
