@@ -1,5 +1,6 @@
 # Tubi JupyterLab Extensions
 
+[![Build Status](https://travis-ci.org/Tubitv/jupyterlab-extensions.svg?branch=master)](https://travis-ci.org/Tubitv/jupyterlab-extensions)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
