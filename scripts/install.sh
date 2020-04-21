@@ -73,6 +73,9 @@ function install_node() {
   popd
 }
 
+# execute following commands always in the root
+pushd $SCRIPT_DIR/../
+
 which conda && conda -V || install_conda
 which node && node -v || install_node
 
@@ -112,6 +115,6 @@ jupyter labextension install packages/nteract-data-explorer
 # 7. List installed extensions
 jupyter labextension list
 
-echo -e "If you haven't set up your own conda and node,\nexecute the following commands to use ${GREEN}conda${PLAIN} and ${GREEN}node${PLAIN} installed by this script:"
-echo -e "${GREEN}export PATH=$CONDA_DIR/bin:\$PATH${PLAIN}"
-echo -e "${GREEN}export PATH=$HOME/$NODE_DIR/bin:\$PATH${PLAIN}"
+echo -e "If you haven't set up your own conda and node, execute the following \ncommands to use ${GREEN}conda${PLAIN} and ${GREEN}node${PLAIN} installed by this script:"
+echo "export PATH=$CONDA_DIR/bin:\$PATH"
+echo "export PATH=$HOME/$NODE_DIR/bin:\$PATH"
