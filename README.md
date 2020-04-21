@@ -52,7 +52,7 @@ Download and install Node.js in this [page](https://nodejs.org/en/download/) in 
 ```bash
 conda create -n jupyterlab-ext python=3.7 -y
 conda activate jupyterlab-ext
-pip install -r requirements.txt
+pip install -r scripts/requirements.txt
 ```
 
 [requirements.txt](./scripts/requirements.txt) contains these PyPI packages

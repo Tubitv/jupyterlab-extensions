@@ -3,6 +3,9 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
+GREEN='\033[0;32m'
+PLAIN='\033[0m'
+
 function install_conda() {
   CONDA_DIR=$HOME/miniconda
   export PATH=$CONDA_DIR/bin:$PATH
@@ -84,6 +87,11 @@ conda info -e
 pip install -r $SCRIPT_DIR/requirements.txt
 
 # 2. Clean existed npm packages
+# Fix "sh: 1: node: Permission denied"
+if [[ $UID -eq 0 ]]; then
+  npm config set user $UID
+  npm config set unsafe-perm true
+fi
 npx lerna clean --yes
 rm -rf node_modules # `lerna clean` does not remove modules from the root node_modules directory
 
@@ -103,3 +111,7 @@ jupyter labextension install packages/nteract-data-explorer
 
 # 7. List installed extensions
 jupyter labextension list
+
+echo -e "If you haven't set up your own conda and node,\nexecute the following commands to use ${GREEN}conda${PLAIN} and ${GREEN}node${PLAIN} installed by this script:"
+echo -e "${GREEN}export PATH=$CONDA_DIR/bin:\$PATH${PLAIN}"
+echo -e "${GREEN}export PATH=$HOME/$NODE_DIR/bin:\$PATH${PLAIN}"
