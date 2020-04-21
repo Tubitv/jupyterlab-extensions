@@ -1,5 +1,5 @@
 {
-  "name": "tdr-jupyter-plugin",
+  "name": "jupyterlab-extensions",
   "private": true,
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
