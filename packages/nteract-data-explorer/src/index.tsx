@@ -4,7 +4,7 @@ import { Widget } from '@phosphor/widgets';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Message } from '@phosphor/messaging';
-import DataExplorer from "@nteract/data-explorer";
+import DataExplorer, { Props } from '@nteract/data-explorer';
 
 /**
  * The default mime type for the extension.
@@ -36,8 +36,6 @@ const findNotebookPanel = (widget: Widget): any => {
  * A widget for rendering tabular-data-resource.
  */
 export class NteractDataExplorerWidget extends Widget implements IRenderMime.IRenderer {
-  private _hasRendered = false;
-
   /**
    * Construct a new output widget.
    */
@@ -85,8 +83,13 @@ export class NteractDataExplorerWidget extends Widget implements IRenderMime.IRe
 
         clearInterval(timer);
         ReactDOM.render(
-          // @ts-ignore
-          <DataExplorer data={data} metadata={model.metadata.dataExplorer || {}} onMetadataChange={onMetadataChange} />,
+          <DataExplorer
+            data={data as unknown as Props['data']}
+            metadata={(model.metadata.dataExplorer as unknown as Props['metadata']) || {}}
+            mediaType={MIME_TYPE}
+            initialView={'grid'}
+            onMetadataChange={onMetadataChange}
+          />,
           this.node,
           resolve
         );
@@ -102,6 +105,7 @@ export class NteractDataExplorerWidget extends Widget implements IRenderMime.IRe
     ReactDOM.unmountComponentAtNode(this.node);
   }
 
+  private _hasRendered = false;
   private _mimeType: string;
 }
 
