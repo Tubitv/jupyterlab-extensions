@@ -3,7 +3,7 @@ import { PathExt } from '@jupyterlab/coreutils';
 import { IDocumentManager } from '@jupyterlab/docmanager';
 import { IFileBrowserFactory } from '@jupyterlab/filebrowser';
 import { Contents } from '@jupyterlab/services';
-import { each, map, toArray } from '@phosphor/algorithm';
+import { each, map, toArray } from '@lumino/algorithm';
 
 const CommandIDs = {
   deepCopy: 'filebrowser:deep-copy',
@@ -164,7 +164,7 @@ function activate(
   });
 
   // Tune rank parameter to put these commands as close as possible
-  // @link https://github.com/phosphorjs/phosphor/blob/master/packages/widgets/src/contextmenu.ts#L157-L169
+  // @link https://github.com/jupyterlab/lumino/blob/master/packages/widgets/src/contextmenu.ts#L159-L171
   app.contextMenu.addItem({
     command: CommandIDs.deepCopy,
     selector: selectorItem,
