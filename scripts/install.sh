@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 GREEN='\033[0;32m'
@@ -104,15 +103,11 @@ npx lerna bootstrap
 # 4. Compile all packages
 npx lerna run build
 
-# 5. Disable JupyterLab share-file
-jupyter labextension disable @jupyterlab/filebrowser-extension:share-file
-
-# 6. Install extensions
-jupyter labextension install packages/filebrowser-share-file
+# 5. Install extensions
 jupyter labextension install packages/filebrowser-deep-copy-paste
 jupyter labextension install packages/nteract-data-explorer
 
-# 7. List installed extensions
+# 6. List installed extensions
 jupyter labextension list
 
 echo -e "If you haven't set up your own conda and node, execute the following \ncommands to use ${GREEN}conda${PLAIN} and ${GREEN}node${PLAIN} installed by this script:"

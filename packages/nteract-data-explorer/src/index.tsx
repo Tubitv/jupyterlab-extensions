@@ -1,9 +1,9 @@
 import { IRenderMime } from '@jupyterlab/rendermime-interfaces';
-import { JSONObject } from '@phosphor/coreutils';
-import { Widget } from '@phosphor/widgets';
+import { JSONObject } from '@lumino/coreutils';
+import { Widget } from '@lumino/widgets';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Message } from '@phosphor/messaging';
+import { Message } from '@lumino/messaging';
 import DataExplorer, { Props } from '@nteract/data-explorer';
 
 /**

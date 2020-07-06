@@ -13,15 +13,15 @@
     "jest": "^24.9.0",
     "lerna": "^3.20.2",
     "npm-force-resolutions": "^0.0.3",
-    "rimraf": "~2.6.2",
+    "rimraf": "~3.0.0",
     "ts-jest": "^24.3.0",
-    "typescript": "~3.5.1",
+    "typescript": "~3.7.3",
     "minimist": ">=1.2.3"
   },
   "engines": {
     "node": ">=10"
   },
   "resolutions": {
-    "@types/react": "~16.8.18"
+    "@types/react": "~16.9.0"
   }
 }
