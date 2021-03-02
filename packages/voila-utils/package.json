@@ -1,0 +1,50 @@
+{
+  "name": "@tubitv/voila-utils",
+  "version": "0.1.2",
+  "description": "Custom plugin with some voila utilities",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension",
+    "voila"
+  ],
+  "homepage": "https://github.com/Tubitv/jupyterlab-extensions",
+  "bugs": {
+    "url": "https://github.com/Tubitv/jupyterlab-extensions/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Tubi Engineering",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tubitv/jupyterlab-extensions.git"
+  },
+  "scripts": {
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "build": "tsc -b",
+    "watch": "tsc -b --watch",
+    "test": "npx jest"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^3.0.0",
+    "@jupyterlab/apputils": "^3.0.0",
+    "@jupyterlab/coreutils": "^5.0.0",
+    "@jupyterlab/filebrowser": "^3.0.0",
+    "@lumino/algorithm": "^1.4.3"
+  },
+  "sideEffects": [
+    "style/*.css"
+  ],
+  "jupyterlab": {
+    "extension": true
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
