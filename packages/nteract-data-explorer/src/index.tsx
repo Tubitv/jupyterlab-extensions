@@ -4,7 +4,8 @@ import { Widget } from '@lumino/widgets';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Message } from '@lumino/messaging';
-import DataExplorer, { Props } from '@nteract/data-explorer';
+import DataExplorer from '@nteract/data-explorer';
+import { DataProps, Metadata } from '@nteract/data-explorer/lib/utilities/types'
 
 /**
  * The default mime type for the extension.
@@ -84,8 +85,8 @@ export class NteractDataExplorerWidget extends Widget implements IRenderMime.IRe
         clearInterval(timer);
         ReactDOM.render(
           <DataExplorer
-            data={data as unknown as Props['data']}
-            metadata={(model.metadata.dataExplorer as unknown as Props['metadata']) || {}}
+            data={data as unknown as DataProps}
+            metadata={(model.metadata.dataExplorer as unknown as Metadata) || {}}
             mediaType={MIME_TYPE}
             initialView={'grid'}
             onMetadataChange={onMetadataChange}
