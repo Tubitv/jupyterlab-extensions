@@ -99,7 +99,6 @@ rm -rf node_modules # `lerna clean` does not remove modules from the root node_m
 
 # 3. Install npm package dependencies
 npx lerna bootstrap
-npx lerna run npm-force-resolutions
 
 # 4. Compile all packages
 npx lerna run build
