@@ -5,7 +5,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Message } from '@lumino/messaging';
 import DataExplorer from '@nteract/data-explorer';
-import {DataProps, Metadata} from '@nteract/data-explorer/lib/utilities/types'
+import { DataProps, Metadata } from '@nteract/data-explorer/lib/utilities/types'
 
 /**
  * The default mime type for the extension.
