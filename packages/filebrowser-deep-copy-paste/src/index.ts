@@ -144,7 +144,7 @@ function activate(
           const newPath = PathExt.join(basePath, PathExt.basename(path));
           log('deep paste cut item', path);
           await manager.rename(path, newPath);
-          return;
+          break;
         }
 
         const item = await manager.services.contents.get(path, { content: true });
