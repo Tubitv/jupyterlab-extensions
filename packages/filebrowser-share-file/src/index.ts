@@ -18,11 +18,11 @@ import {
 
 import {
   toArray
-} from '@phosphor/algorithm';
+} from '@lumino/algorithm';
 
 const shareFile: JupyterFrontEndPlugin<void> = {
   activate: activateShareFile,
-  id: '@jupyterlab/filebrowser-extension:share-file',
+  id: '@tubitv/filebrowser-extension:share-file',
   requires: [IFileBrowserFactory],
   autoStart: true
 };
