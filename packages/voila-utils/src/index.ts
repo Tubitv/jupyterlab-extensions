@@ -44,7 +44,7 @@ export function log(...args: any[]): void {
  * @param url
  */
 export function transformToUserRedirectUrl(url: string): string {
-  return url.replace(/\/user\/([^\/]+)\//, "/user-redirect/");
+  return url.replace(/\/user\/([^\/]+)\//, '/user-redirect/');
 }
 
 function activateUtils(
