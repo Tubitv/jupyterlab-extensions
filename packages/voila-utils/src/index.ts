@@ -51,7 +51,7 @@ function activateUtils(
   app: JupyterFrontEnd,
   factory: IFileBrowserFactory
 ): void {
-  console.log('Custom plugin is activated! : voila-utils');
+  log('Custom plugin is activated! : voila-utils');
   const { commands } = app;
   const { tracker } = factory;
 
