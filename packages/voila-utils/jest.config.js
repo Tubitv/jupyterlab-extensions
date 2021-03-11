@@ -10,7 +10,7 @@ const local = {
   transformIgnorePatterns: ['/node_modules/(?!(@jupyterlab/.*)/)']
 };
 
-const upstream = func('jupyterlab_filebrowser_share_file', __dirname);
+const upstream = func('voila_utils', __dirname);
 const reuseFromUpstream = [
   'moduleNameMapper',
   'setupFilesAfterEnv',
