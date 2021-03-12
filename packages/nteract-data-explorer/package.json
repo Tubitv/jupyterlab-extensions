@@ -1,6 +1,6 @@
 {
   "name": "@tubitv/nteract-data-explorer",
-  "version": "0.1.3-alpha.0",
+  "version": "0.1.3-alpha.1",
   "description": "A JupyterLab extension for rendering tabular-data-resource files.",
   "license": "BSD-3-Clause",
   "author": "Tubi Engineering",

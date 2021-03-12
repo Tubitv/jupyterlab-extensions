@@ -1,11 +1,12 @@
 {
-  "name": "@tubitv/filebrowser-deep-copy-paste",
-  "version": "0.1.2-alpha.1",
-  "description": "A JupyterLab extension to support deep copy and paste.",
+  "name": "@tubitv/voila-utils",
+  "version": "0.1.3-alpha.0",
+  "description": "Custom plugin with some voila utilities",
   "keywords": [
     "jupyter",
     "jupyterlab",
-    "jupyterlab-extension"
+    "jupyterlab-extension",
+    "voila"
   ],
   "homepage": "https://github.com/Tubitv/jupyterlab-extensions",
   "bugs": {
@@ -27,15 +28,14 @@
   "scripts": {
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
     "build": "tsc -b",
-    "watch": "tsc -b -w",
+    "watch": "tsc -b --watch",
     "test": "npx jest"
   },
   "dependencies": {
     "@jupyterlab/application": "^3.0.0",
+    "@jupyterlab/apputils": "^3.0.0",
     "@jupyterlab/coreutils": "^5.0.0",
-    "@jupyterlab/docmanager": "^3.0.0",
     "@jupyterlab/filebrowser": "^3.0.0",
-    "@jupyterlab/services": "^6.0.0",
     "@lumino/algorithm": "^1.3.3"
   },
   "sideEffects": [
