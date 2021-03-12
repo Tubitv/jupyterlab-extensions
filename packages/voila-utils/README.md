@@ -6,7 +6,7 @@ This is to add a context menu item to the file browser "Copy Shareable Dashboard
 
 The link is "shareable" in that references to the Jupyterhub user and server name in the URL are replaced with "user-redirect".
 
-In order for that jupyterlab to *handle* the generated Voila URL, be sure to install the jupyterlab voila serverextension:
+In order for jupyterlab to *handle* the generated Voila URL, be sure you have installed the jupyterlab voila serverextension:
 https://voila.readthedocs.io/en/stable/install.html
 
 ## Prerequisites
