@@ -1,6 +1,6 @@
 {
   "name": "@tubitv/filebrowser-share-file",
-  "version": "0.1.2",
+  "version": "0.1.3-alpha.0",
   "description": "Custom filebrowser plugin that generates /user-redirect link",
   "keywords": [
     "jupyter",

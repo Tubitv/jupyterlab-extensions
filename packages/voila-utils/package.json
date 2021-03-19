@@ -1,6 +1,6 @@
 {
   "name": "@tubitv/voila-utils",
-  "version": "0.1.3-alpha.0",
+  "version": "0.1.3-alpha.1",
   "description": "Custom plugin with some voila utilities",
   "keywords": [
     "jupyter",
